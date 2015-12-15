@@ -6,6 +6,9 @@
   "bugs": "http://github.com/keithamus/packagesmith.questions.description/issues",
   "license": "MIT",
   "author": "Keith Cirkel (http://keithcirkel.co.uk)",
+  "files": [
+    "lib/"
+  ],
   "main": "lib/index.js",
   "repository": {
     "type": "git",
@@ -21,7 +24,8 @@
   },
   "config": {
     "ghooks": {
-      "commit-msg": "validate-commit-msg"
+      "commit-msg": "validate-commit-msg",
+      "pre-commit": "npm t"
     }
   },
   "babel": {
