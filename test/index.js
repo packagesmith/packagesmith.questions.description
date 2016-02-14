@@ -8,7 +8,7 @@ describe('descriptionQuestion', () => {
   it('returns an object with expected keys', () => {
     descriptionQuestion()
       .should.be.an('object')
-      .with.keys([ 'name', `message`, `when` ]);
+      .with.keys([ 'name', 'message', 'when' ]);
   });
 
   describe('when function', () => {

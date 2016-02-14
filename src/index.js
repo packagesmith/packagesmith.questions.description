@@ -8,13 +8,13 @@ export function descriptionQuestion() {
         return false;
       }
       try {
-        const description = JSON.parse(await readFile(`${directory}/package.json`, 'utf8')).description;
+        const description = JSON.parse(await readFile(`${ directory }/package.json`, 'utf8')).description;
         if (description) {
           answers.description = description;
           return false;
         }
         return true;
-      } catch (error) {
+      } catch (packageJsonError) {
         return true;
       }
     },
